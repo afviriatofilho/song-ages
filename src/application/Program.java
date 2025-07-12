@@ -8,8 +8,8 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import entities.AgeCalculator;
-import entities.AgeInMonths;
-import entities.AgeInYears;
+import entities.AgeCalculatorMonths;
+import entities.AgeCalculatorYears;
 import entities.Song;
 
 public class Program {
@@ -36,10 +36,10 @@ public class Program {
 		
 		for (Song s : songs) {
 			if (unit == 'm') {
-				AgeCalculator calc = new AgeInMonths();
+				AgeCalculator calc = new AgeCalculatorMonths();
 				System.out.printf("%s is %d months old.\n", s.getName(), calc.age(s));
 			} else if (unit == 'y') {
-				AgeCalculator calc = new AgeInYears();
+				AgeCalculator calc = new AgeCalculatorYears();
 				System.out.printf("%s is %d years old.\n", s.getName(), calc.age(s));
 			}
 		
